@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Notas</title>
+    <style>
+        header{
+                top: 0%;
+                height: 10%;
+                width: 100%;
+                position: fixed;
+                left: 0%;
+                background-color: black;
+        }
+        nav{
+                top: 10%;
+                height: 10%;
+                width: 100%;
+                position: fixed;
+                left: 0%;
+                background-color: greenyellow;
+        }
+        main{
+                top: 20%;
+                height: 70%;
+                width: 100%;
+                position: fixed;
+                left: 0%;
+                overflow-x: auto;
+        }
+        footer{
+                bottom: 0%;
+                height: 10%;
+                width: 100%;
+                position: fixed;
+                left: 0%;
+                background-color: red;
+        }
+        .t{
+                color: white;
+        }
+        h1{
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body style="text-align: center;">
+    <header class="t"><h1>Notas de 0 a 10</h1></header>
+    <nav><h1>Do Aluno</h1></nav>
+    <main>
+        <form action="aula12-04-22-1.html">
+            <h3>Nome</h3>
+            <label for="no">Nome do aluno:</label>
+            <input type="text" id="no" name="nome1"><br>
+
+            </br>
+            <h3>Nota</h3>
+           <label for="n1">Nota do aluno:</label>
+           <input type="text" id="n1" name="not1"><br><br>
+           <input type="reset" value="Limpar">
+           <input type="button" value="Enter" onclick="na()">
+        </form>
+        <script>
+            var msg, note;
+            function na(){
+                msg=document.getElementById("no").value;
+                note=parseFloat(document.getElementById("n1").value);
+                if (note>=9){
+                    note="MB";
+                }
+                 if (note<=8&&note>6){
+                        note="B";
+                }
+                 if (note<=6&&note>4){
+                        note="R"
+                }
+                if (note>5&&note>=0){
+                    note="I"
+                }
+                
+                msg="O aluno"+" "+msg+","+" "+"Teve a menção de"+" "+note;
+                alert(msg)
+                }
+
+
+        </script>
+    </main>
+    <footer class="t"><h1>Athos</h1></footer>
+</body>
+</html>
